@@ -58,9 +58,7 @@ classifier = TenSecondEmotionClassifier("model.pth")
 classifier.start_listening()
 
 
-
-
-# 1. 📊 Data Processing & Exploration
+## 1. 📊 Data Processing & Exploration
 | File | Purpose | Features |
 |------|---------|----------|
 | `001test.ipynb` | Data analysis notebook | Audio segmentation, data cleaning, exploratory analysis |
