@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 
 
-# train model -- adjust and optimise
 class CNNNetwork10(nn.Module):
     def __init__(self, num_classes=10):
         super().__init__()
@@ -17,7 +16,7 @@ class CNNNetwork10(nn.Module):
             nn.Conv2d(64, 128, 3, padding=1),
             nn.BatchNorm2d(128),
             nn.ReLU(inplace=True),
-            nn.Conv2d(128, 128, 3, padding=1),  # feature refined
+            nn.Conv2d(128, 128, 3, padding=1),
             nn.BatchNorm2d(128),
             nn.ReLU(inplace=True),
             nn.MaxPool2d(2),
@@ -39,10 +38,9 @@ class CNNNetwork10(nn.Module):
             nn.Dropout2d(0.4)
         )
         
-
         self.classifier = nn.Sequential(
             nn.Dropout(0.6),
-            nn.Linear(512 * 4 * 4, 1024), 
+            nn.Linear(512 * 4 * 4, 1024),
             nn.ReLU(inplace=True),
             nn.BatchNorm1d(1024),
             nn.Dropout(0.4),
@@ -75,41 +73,40 @@ class CNNNetwork10(nn.Module):
             raise ValueError(f"Expected 4D input, got {x.ndim}D: {x.shape}")
         
         x = self.conv_layers(x)
-        x = x.view(x.size(0), -1)  # 展平
+        x = x.view(x.size(0), -1)
         x = self.classifier(x)
         return x
 
 
-# basic model -- test process
 class CNNNetwork_test_1(nn.Module):
     def __init__(self, num_classes=10):
         super().__init__()
         self.conv1 = nn.Sequential(
-            nn.Conv2d(1, 16, 3, padding=1), 
+            nn.Conv2d(1, 16, 3, padding=1),
             nn.ReLU(),
-            nn.BatchNorm2d(16), 
-            nn.MaxPool2d(2), 
-            nn.Dropout(0.3)  # 0.2 -> 0.3
+            nn.BatchNorm2d(16),
+            nn.MaxPool2d(2),
+            nn.Dropout(0.3)
         )
         self.conv2 = nn.Sequential(
-            nn.Conv2d(16, 32, 3, padding=1), 
+            nn.Conv2d(16, 32, 3, padding=1),
             nn.ReLU(),
-            nn.BatchNorm2d(32), 
-            nn.MaxPool2d(2), 
-            nn.Dropout(0.4)  # 0.3 -> 0.4
+            nn.BatchNorm2d(32),
+            nn.MaxPool2d(2),
+            nn.Dropout(0.4)
         )
         self.conv3 = nn.Sequential(
-            nn.Conv2d(32, 64, 3, padding=1), 
+            nn.Conv2d(32, 64, 3, padding=1),
             nn.ReLU(),
-            nn.BatchNorm2d(64), 
-            nn.MaxPool2d(2), 
-            nn.Dropout(0.5)  # 0.4 -> 0.5
+            nn.BatchNorm2d(64),
+            nn.MaxPool2d(2),
+            nn.Dropout(0.5)
         )
         self.conv4 = nn.Sequential(
-            nn.Conv2d(64, 128, 3, padding=1), 
+            nn.Conv2d(64, 128, 3, padding=1),
             nn.ReLU(),
-            nn.BatchNorm2d(128), 
-            nn.MaxPool2d(2), 
+            nn.BatchNorm2d(128),
+            nn.MaxPool2d(2),
             nn.Dropout(0.5)
         )
         self.global_pool = nn.AdaptiveAvgPool2d((1, 1))
