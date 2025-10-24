@@ -1,5 +1,5 @@
 # DT2470 HT25 Music Informatics
-# Group 10 : Hao Wen, Runze Cui, Shangxuan Tang, Weicheng Yuan
+# Group 10 : Runze Cui, Hao Wen, Shangxuan Tang, Weicheng Yuan
 
 # Music Emotion Recognition - File Structure            
 # 🎵 Music Emotion Recognition System
