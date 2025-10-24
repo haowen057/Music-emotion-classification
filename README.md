@@ -52,9 +52,7 @@ A deep learning-based system for real-time music emotion classification that ana
 
 #
 #
-#
-#
-#
+
 
 ## 0. 💡 Baseline: baseline_MLP.py
 
@@ -89,6 +87,9 @@ A deep learning-based system for real-time music emotion classification that ana
 - 2 statistical features
 - Total: 42-dimensional feature vector
 
+#
+#
+#
 
 ## 1. 📊 Data Processing & Exploration
 | File | Purpose | Features |
