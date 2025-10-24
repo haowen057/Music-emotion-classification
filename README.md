@@ -83,7 +83,7 @@ A deep learning-based system for real-time music emotion classification that ana
 | `001test.ipynb` | Data analysis notebook | Audio segmentation, data cleaning, exploratory analysis |
 | `Emotionsounddataset.py` | Dataset handler | Audio preprocessing, label mapping, data loading |
 
-### Core Audio Features Extracted:
+**Core Audio Features Extracted:**
 - **Zero Crossing Rate**: Mean & STD
 - **RMS Energy**: Mean & STD  
 - **Spectral Centroid**: Mean & STD
@@ -94,8 +94,7 @@ A deep learning-based system for real-time music emotion classification that ana
 - **Statistical Features**: Skewness & Kurtosis
 - **MFCC Features**: 13 coefficients + Delta coefficients
 
-### Technical Implementation:
-
+**Technical Implementation:**
 ```python
 # Audio preprocessing
 - Sample rate: Native
