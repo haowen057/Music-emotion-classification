@@ -58,6 +58,11 @@ A deep learning-based system for real-time music emotion classification that ana
 
 ## 0. 💡 Baseline: baseline_MLP.py
 
+| File | Purpose | Features |
+|------|---------|----------|
+| `001test.ipynb` | Data analysis notebook | Audio segmentation, data cleaning, exploratory analysis |
+| `Emotionsounddataset.py` | Dataset handler | Audio preprocessing, label mapping, data loading |
+
 ### Core Audio Features Extracted:
 - **Zero Crossing Rate**: Mean & STD
 - **RMS Energy**: Mean & STD  
@@ -68,7 +73,6 @@ A deep learning-based system for real-time music emotion classification that ana
 - **Spectral Rolloff**: Mean & STD
 - **Statistical Features**: Skewness & Kurtosis
 - **MFCC Features**: 13 coefficients + Delta coefficients
-
 
 ### Technical Implementation:
 
@@ -84,11 +88,6 @@ A deep learning-based system for real-time music emotion classification that ana
 - 8 spectral features (each with mean/std)
 - 2 statistical features
 - Total: 42-dimensional feature vector
-
-#
-#
-#
-#
 
 
 ## 1. 📊 Data Processing & Exploration
