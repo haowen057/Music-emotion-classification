@@ -103,7 +103,6 @@ A deep learning-based system for real-time music emotion classification that ana
 ## ⚙️ Technical Implementation
 
 ### Audio Preprocessing
-```python
 # Audio preprocessing configuration
 - Sample rate: Native
 - Duration: 10 seconds (padded/truncated)
