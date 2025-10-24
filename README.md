@@ -83,27 +83,29 @@ A deep learning-based system for real-time music emotion classification that ana
 | `001test.ipynb` | Data analysis notebook | Audio segmentation, data cleaning, exploratory analysis |
 | `Emotionsounddataset.py` | Dataset handler | Audio preprocessing, label mapping, data loading |
 
-**Core Audio Features Extracted:**
+## 🎵 Core Audio Features Extracted
+
+**Spectral Features:**
 - **Zero Crossing Rate**: Mean & STD
-- **RMS Energy**: Mean & STD  
+- **RMS Energy**: Mean & STD
 - **Spectral Centroid**: Mean & STD
 - **Spectral Bandwidth**: Mean & STD
 - **Spectral Contrast**: Mean & STD
 - **Spectral Flatness**: Mean & STD
 - **Spectral Rolloff**: Mean & STD
-- **Statistical Features**: Skewness & Kurtosis
-- **MFCC Features**: 13 coefficients + Delta coefficients
 
-**Technical Implementation:**
+**Statistical Features:**
+- Skewness & Kurtosis
+
+**MFCC Features:**
+- 13 MFCC coefficients + 13 Delta MFCC coefficients
+
+## ⚙️ Technical Implementation
+
+### Audio Preprocessing
 ```python
-# Audio preprocessing
+# Audio preprocessing configuration
 - Sample rate: Native
 - Duration: 10 seconds (padded/truncated)
 - Data type: float32
 - NaN handling: Zero replacement
-
-# Feature engineering
-- 13 MFCC coefficients + 13 Delta MFCC
-- 8 spectral features (each with mean/std)
-- 2 statistical features
-- Total: 42-dimensional feature vector
