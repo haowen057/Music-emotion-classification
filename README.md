@@ -55,8 +55,9 @@ A deep learning-based system for real-time music emotion classification that ana
 #
 #
 #
-## 0. 📊 Baseline 
-# baseline_MLP.py
+## 0. 📊 Baseline: baseline_MLP.py
+#
+#
 ## 1. 📊 Data Processing & Exploration
 | File | Purpose | Features |
 |------|---------|----------|
