@@ -82,6 +82,12 @@ A deep learning-based system for real-time music emotion classification that ana
 - 8 spectral features (each with mean/std)
 - 2 statistical features
 - Total: 42-dimensional feature vector
+
+#
+#
+#
+#
+
 ## 1. 📊 Data Processing & Exploration
 | File | Purpose | Features |
 |------|---------|----------|
