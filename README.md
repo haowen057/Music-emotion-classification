@@ -55,6 +55,7 @@ A deep learning-based system for real-time music emotion classification that ana
 #
 #
 #
+
 ## 0. 💡 Baseline: baseline_MLP.py
 
 ### Core Audio Features Extracted:
@@ -87,6 +88,7 @@ A deep learning-based system for real-time music emotion classification that ana
 #
 #
 #
+
 
 ## 1. 📊 Data Processing & Exploration
 | File | Purpose | Features |
