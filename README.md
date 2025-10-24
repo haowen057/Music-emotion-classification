@@ -1,7 +1,6 @@
 # DT2470 HT25 Music Informatics
-# Group 10 : Runze Cui, Hao Wen, Shangxuan Tang, Weicheng Yuan
+# Group 10: Runze Cui, Hao Wen, Shangxuan Tang, Weicheng Yuan
 
-# Music Emotion Recognition - File Structure            
 # 🎵 Music Emotion Recognition System
 
 A deep learning-based system for real-time music emotion classification that analyzes 10-second audio segments.
@@ -35,14 +34,6 @@ A deep learning-based system for real-time music emotion classification that ana
 - Multi-threaded processing architecture
 - Support for real-time listening and file analysis
 
-## ✨ Key Features
-
-- 🚀 **Efficient Training**: Pre-computed features + Mixed precision acceleration
-- 🛡️ **Enhanced Robustness**: Multi-dimensional data augmentation strategies
-- ⚡ **Smart Optimization**: Adaptive learning rate + Early stopping mechanism
-- 🎧 **Real-time Inference**: Low-latency 10-second audio analysis
-- 🔧 **Deployment Friendly**: Comprehensive troubleshooting guide
-
 ## 📊 Dataset
 
 - **Source**: MTG-Jamendo mood/theme dataset
@@ -50,18 +41,14 @@ A deep learning-based system for real-time music emotion classification that ana
 - **Scale**: Thousands of balanced samples
 - **Format**: MP3 audio + TSV metadata
 
-#
-#
+## 🗂️ File Structure & Implementation
 
-
-## 0. 💡 Baseline: baseline_MLP.py
-
+### 0. 💡 Baseline Model
 | File | Purpose | Features |
 |------|---------|----------|
-| `001test.ipynb` | Data analysis notebook | Audio segmentation, data cleaning, exploratory analysis |
-| `Emotionsounddataset.py` | Dataset handler | Audio preprocessing, label mapping, data loading |
+| `baseline_MLP.py` | Baseline MLP model | Traditional feature-based approach |
 
-### Core Audio Features Extracted:
+**Core Audio Features Extracted:**
 - **Zero Crossing Rate**: Mean & STD
 - **RMS Energy**: Mean & STD  
 - **Spectral Centroid**: Mean & STD
@@ -72,8 +59,7 @@ A deep learning-based system for real-time music emotion classification that ana
 - **Statistical Features**: Skewness & Kurtosis
 - **MFCC Features**: 13 coefficients + Delta coefficients
 
-### Technical Implementation:
-
+**Technical Implementation:**
 ```python
 # Audio preprocessing
 - Sample rate: Native
@@ -86,29 +72,3 @@ A deep learning-based system for real-time music emotion classification that ana
 - 8 spectral features (each with mean/std)
 - 2 statistical features
 - Total: 42-dimensional feature vector
-
-#
-#
-#
-
-## 1. 📊 Data Processing & Exploration
-| File | Purpose | Features |
-|------|---------|----------|
-| `001test.ipynb` | Data analysis notebook | Audio segmentation, data cleaning, exploratory analysis |
-| `Emotionsounddataset.py` | Dataset handler | Audio preprocessing, label mapping, data loading |
-
-## 2. 🧠 Model Architecture
-| File | Model | Architecture Details |
-|------|-------|---------------------|
-| `cnn.py` | CNNNetwork10 | Convolutional Neural Network for spectrogram analysis |
-
-## 3. 🏋️ Training Pipeline
-| File | Training Components | Augmentation Strategies |
-|------|-------------------|------------------------|
-| `AudioAugmentation.py` | Data augmentation | Audio time-stretching, pitch shifting, spectral masking |
-| `Train_Final.py` | Main training script | Mixed precision, OneCycleLR, early stopping |
-
-## 4. 🚀 Deployment & Evaluation
-| File | Application | Functionality |
-|------|-------------|---------------|
-| `real_time_test.py` | Real-time system | Live audio emotion classification |
