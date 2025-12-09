@@ -8,6 +8,7 @@ from collections import deque
 from cnn import CNNNetwork10
 from Train_Final import Config
 
+
 class TenSecondEmotionClassifier:
     def __init__(self, model_path, sample_rate=22050):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -256,3 +257,4 @@ def test_with_pre_recorded_audio(audio_file_path):
 
 if __name__ == "__main__":
     main()
+
