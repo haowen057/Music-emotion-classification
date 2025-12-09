@@ -99,8 +99,8 @@ A deep learning-based system for real-time music emotion classification that ana
 **Statistical Features:**
 - Skewness & Kurtosis
 
-**MFCC Features:**
-- 13 MFCC coefficients + 13 Delta MFCC coefficients
+**Features:**
+- log-mel
 
 ## ⚙️ Technical Implementation
 
@@ -108,5 +108,5 @@ A deep learning-based system for real-time music emotion classification that ana
 # Audio preprocessing configuration
 - Sample rate: Native
 - Duration: 10 seconds (padded/truncated)
-- Data type: float32
+- Data type: float32(mix float 16)
 - NaN handling: Zero replacement
